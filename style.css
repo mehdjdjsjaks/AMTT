@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0d0d0d, #1c1c2b);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+header {
+  padding: 10px 20px;
+  background: #111;
+  text-align: left;
+  font-size: 1.4rem;
+  color: #00ffe1;
+  border-bottom: 1px solid #333;
+}
+
+#pinned-message {
+  background: #222;
+  padding: 10px;
+  text-align: center;
+  color: #fffd;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #444;
+}
+
+#pinned-message button {
+  background: #00ffe1;
+  color: black;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#chat {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.message {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  box-shadow: 0 0 10px #00ffe140;
+}
+
+.user {
+  align-self: flex-end;
+  background: #444;
+  color: white;
+}
+
+.bot {
+  align-self: flex-start;
+  background: #00ffe120;
+  color: #00ffe1;
+  border: 1px solid #00ffe1;
+}
+
+footer {
+  padding: 10px;
+  display: flex;
+  background: #111;
+  border-top: 1px solid #333;
+}
+
+#user-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: #222;
+  color: white;
+}
+
+#send-btn {
+  margin-left: 10px;
+  background: #00ffe1;
+  border: none;
+  color: black;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
