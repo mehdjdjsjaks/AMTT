@@ -9,10 +9,18 @@
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
     <script defer src="pwa.js"></script>
+    <style>
+      video {
+        height: 100px;
+        pointer-events: none;
+        user-select: none;
+        object-fit: cover;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <img src="1.mp4" alt="Axcel Logo" style="height: 100px; pointer-events: none; user-select: none;" />
+      <video id="logo-video" autoplay muted playsinline></video>
     </header>
 
     <div id="pinned-message">
@@ -27,5 +35,19 @@
       <input type="text" id="user-input" placeholder="سوالی بپرس..." />
       <button id="send-btn">ارسال</button>
     </footer>
+
+    <script>
+      const video = document.getElementById("logo-video");
+      video.src = "1.mp4";
+
+      // وقتی به آخر ویدیو رسید، فریز بشه
+      video.addEventListener("ended", () => {
+        video.pause();
+        video.currentTime = video.duration; // فریم آخر رو نشون بده
+      });
+
+      // جلوگیری از راست‌کلیک برای دانلود
+      video.addEventListener("contextmenu", e => e.preventDefault());
+    </script>
   </body>
 </html>
